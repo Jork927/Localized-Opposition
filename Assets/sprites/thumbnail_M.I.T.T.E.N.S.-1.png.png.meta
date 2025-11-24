@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e9b48e0171233684492457bf2fecdd98
+guid: 3a06fb3e5206d0d45a7bc1c6dc1aa82e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3248338037871341539
-    second: thumbnail_MIT GUY-2.png_0
+      213: 1064091134773303251
+    second: thumbnail_M.I.T.T.E.N.S.-1.png_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: thumbnail_MIT GUY-2.png_0
+      name: thumbnail_M.I.T.T.E.N.S.-1.png_0
       rect:
         serializedVersion: 2
-        x: 35
+        x: 53
         y: 8
-        width: 218
-        height: 272
+        width: 227
+        height: 227
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d101a46d3c59be2d0800000000000000
-      internalID: -3248338037871341539
+      spriteID: 3d71ec0df3964ce00800000000000000
+      internalID: 1064091134773303251
       vertices: []
       indices: 
       edges: []
@@ -160,8 +160,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      thumbnail_MIT GUY-2.png_0: -3248338037871341539
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

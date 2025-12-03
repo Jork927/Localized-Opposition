@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      thumbnail_MIT GUY-2.png_0: -3248338037871341539
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

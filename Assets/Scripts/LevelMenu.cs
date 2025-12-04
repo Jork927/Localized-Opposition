@@ -7,18 +7,19 @@ using UnityEngine.UI;
 public class LevelMenu : MonoBehaviour
 {
     public Button[] buttons;
-    private int unlockedLevel;
+    public int unlockedLevel = 1;
 
     private void Awake()
     {
         int unlockedLevels = PlayerPrefs.GetInt("unlockedLevels", 1);
-        for (int i = 1; i < buttons.Length; i++)
-        {
-            buttons[i].interactable = false;
-        }
-        for (int i = 0; i < unlockedLevel; i++)
+
+        for (int i = 0; i < unlockedLevels; i++)
         {
             buttons[i].interactable = true;
+        }
+        for (int i = unlockedLevels; i < buttons.Length; i++)
+        {
+            buttons[i].interactable = false;
         }
     }
 

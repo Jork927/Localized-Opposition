@@ -6,25 +6,25 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/StartMenu.unity
+    path: Assets/Scenes/LEVELS/StartMenu.unity
     guid: 87c7068f6f2563e459e7d8208ae5a074
   - enabled: 1
     path: Assets/Scenes/LEVELS/Level Select.unity
     guid: b49eb5f5530061f4b81b11b6d4b98123
   - enabled: 1
-    path: Assets/Scenes/LEVELS/1Tutorial.unity
+    path: Assets/Scenes/LEVELS/Tutorial.unity
     guid: 58add5205d38d57408a1dcf40844b4eb
   - enabled: 1
-    path: Assets/Scenes/LEVELS/2Ground.unity
+    path: Assets/Scenes/LEVELS/Level 3.unity
     guid: 94a8c8c35e36df44899504379f42440e
   - enabled: 1
-    path: Assets/Scenes/LEVELS/3Basement.unity
+    path: Assets/Scenes/LEVELS/Level 4.unity
     guid: ee9bc8f67036cbc4393cdf7f353cfd26
   - enabled: 1
-    path: Assets/Scenes/LEVELS/4Lab.unity
+    path: Assets/Scenes/LEVELS/Level 5.unity
     guid: 772195d2f211f1f4f9debd66cf1e9234
   - enabled: 1
-    path: Assets/Scenes/LEVELS/5Servers.unity
+    path: Assets/Scenes/LEVELS/Level 6.unity
     guid: 6e334afc739d724409ff7acab0dfb5ff
   - enabled: 0
     path: Assets/Scenes/Val's Scene.unity

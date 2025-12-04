@@ -9,14 +9,14 @@ public class LevelSelect : MonoBehaviour
 
     public void TutorialButton()
     {
-        SceneManager.LoadScene("1Tutorial");
+        SceneManager.LoadScene("Tutorial");
         
     }
 
     public void GroundButton()
     {
         unlocked = 2;
-        SceneManager.LoadScene("2Ground");
+        SceneManager.LoadScene("Ground");
         
     }
 
@@ -24,7 +24,7 @@ public class LevelSelect : MonoBehaviour
     {
         if (unlocked >= 2)
         {
-         SceneManager.LoadScene("3Basement");
+         SceneManager.LoadScene("Basement");
             unlocked = 3;
         }
         else 
@@ -35,12 +35,17 @@ public class LevelSelect : MonoBehaviour
 
     public void LabButton()
     {
-        SceneManager.LoadScene("4Lab");
+        SceneManager.LoadScene("Lab");
         unlocked = 4;
     }
 
     public void ServersButton()
     {
-        SceneManager.LoadScene("5Servers");
+        SceneManager.LoadScene("Servers");
+    }
+
+    public void MenuButton()
+    {
+        SceneManager.LoadScene("StartMenu");
     }
 }

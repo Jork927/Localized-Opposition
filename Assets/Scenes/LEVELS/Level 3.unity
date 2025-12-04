@@ -244,9 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6a8d1f33465a2c43bded488ced6b402, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onEnter:
-    m_PersistentCalls:
-      m_Calls: []
+  level: Level Select
 --- !u!61 &127703320
 BoxCollider2D:
   m_ObjectHideFlags: 0

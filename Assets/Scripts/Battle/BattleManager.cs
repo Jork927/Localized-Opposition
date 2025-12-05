@@ -1,27 +1,73 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class BattleManager : MonoBehaviour
 {
-    // References
-    [Header("Turn Scripts")]
-    public MonoBehaviour playerTurnScript;
-    public MonoBehaviour[] enemyTurnScripts;
-
-    // Battle state variables
-    [Header("Battle State")]
-    public int turnNumber = 0;
-    public string turnState = "Player Turn";
-    public bool turnActive = true;
-    public float turnTime = 0;
-
     // Debug
     [Header("Debug")]
-    public GameObject debugText;
+    TextMeshProUGUI debugText;
+
+    // References
+    [Header("Turn Scripts")]
+    MonoBehaviour playerTurnScript; // The player turn script
+    EnemyAttackLibrary enemyAttackLibrary; // The enemy attack library
+
+    // Battle dependancy variables
+    [Header("Battle Dependancies")]
+    public string turnState = "Player Turn"; // Whose turn is it?
+    public bool turnActive = true; // Is a turn currently active?
+    float turnTimeReal = 0; // How long the current turn has been active?
+    public float turnTime; // Rounded turn time for use in other scripts
+
+    MonoBehaviour enemyAttack; // The attack script used during the enemy's turn
 
     void Start()
     {
-        
+        debugText = GameObject.Find("Debug Text").GetComponent<TextMeshProUGUI>();
+        playerTurnScript = GameObject.Find("Player Turn Script").GetComponent<PlayerTurn>();
+        enemyAttackLibrary = GameObject.Find("Enemy Turn Scripts").GetComponent<EnemyAttackLibrary>();
+
+        StartPlayerTurn();
+    }
+
+    public void StartPlayerTurn()
+    {
+        turnState = "Player Turn";
+        turnActive = true;
+        turnTimeReal = 0;
+
+        Debug.Log("Player turn started.");
+    }
+
+    public void EndPlayerTurn()
+    {
+        turnActive = false;
+
+        Debug.Log("Player turn ended.");
+
+        StartEnemyTurn();
+    }
+
+    public void StartEnemyTurn()
+    {
+        turnState = "Enemy Turn";
+        turnActive = true;
+        turnTimeReal = 0;
+
+        // Select a random attack
+        enemyAttack = enemyAttackLibrary.enemyAttackScripts[Random.Range(0, enemyAttackLibrary.enemyAttackScripts.Length)];
+
+        Debug.Log("Enemy turn started. Using attack: " + enemyAttack.GetType().Name);
+    }
+
+    public void EndEnemyTurn()
+    {
+        turnActive = false;
+
+        Debug.Log("Enemy turn ended.");
+
+        StartPlayerTurn();
     }
 
     void Update()
@@ -29,24 +75,26 @@ public class BattleManager : MonoBehaviour
         // Update turn time if the turn is active
         if (turnActive)
         {
-            turnTime += Time.deltaTime;
+            turnTimeReal += Time.deltaTime;
+            turnTime = Mathf.Round(turnTimeReal * 10) / 10; // Round to 1 decimal place
 
             switch (turnState)
             {
                 case "Player Turn":
-                    // Handle player turn logic here
-                    break;
+                    playerTurnScript.Invoke("Turn", 0);
+                break;
+
                 case "Enemy Turn":
-                    // Handle enemy turn logic here
-                    break;
+                    enemyAttack.Invoke("Attack", 0);
+                break;
+
                 default:
                     Debug.LogWarning("Unknown turn state: " + turnState);
-                    break;
+                break;
             }
         }
 
-        
-        debugText.GetComponent<TextMeshProUGUI>().text = "Turn: " + turnNumber + "\nState: " + turnState + "\nActive: " + turnActive + "\nTime: " + turnTime.ToString("F2");
+        debugText.text = "\nState: " + turnState + "\nActive: " + turnActive + "\nTime: " + turnTime.ToString("F2");
     }
 
     /* The battle system will work as follows:

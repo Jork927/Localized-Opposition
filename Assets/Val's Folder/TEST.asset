@@ -10,11 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f2bf9e9737d0dd4bb4fef827c5815c6, type: 3}
-  m_Name: New Item
+  m_Name: TEST
   m_EditorClassIdentifier: 
-  tile: {fileID: 0}
-  type: 0
-  actionType: 0
-  range: {x: 5, y: 4}
   stackable: 1
-  image: {fileID: 0}
+  image: {fileID: -6682515874435423343, guid: c953e411508174f4297c7ede4ca185f3, type: 3}

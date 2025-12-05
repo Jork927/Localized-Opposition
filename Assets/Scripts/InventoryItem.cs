@@ -15,16 +15,12 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     private void Start()
     {
-        //InitialiseItem(item);
-
-        /* 
-         *  Made whatever this is a comment because it was causing an error. Can't run the game otherwise until fixed.
-         *  - Jasper
-        */
+        InitialiseItem(item);
     }
 
-    public void InitiliseItem(Item newItem)
+    public void InitialiseItem(Item newItem)
     {
+        item = newItem;
         image.sprite = newItem.image;
     }
 

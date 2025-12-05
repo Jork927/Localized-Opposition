@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3a06fb3e5206d0d45a7bc1c6dc1aa82e
+guid: 650fa3afbb4e33d47aeeb1583998e00b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1064091134773303251
-    second: thumbnail_M.I.T.T.E.N.S.-1.png_0
+      213: -1894536124567444308
+    second: suCTtape_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: thumbnail_M.I.T.T.E.N.S.-1.png_0
+      name: suCTtape_0
       rect:
         serializedVersion: 2
-        x: 53
-        y: 8
-        width: 227
-        height: 227
+        x: 2
+        y: 3
+        width: 30
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3d71ec0df3964ce00800000000000000
-      internalID: 1064091134773303251
+      spriteID: ca42301be6145b5e0800000000000000
+      internalID: -1894536124567444308
       vertices: []
       indices: 
       edges: []
@@ -160,8 +160,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      thumbnail_M.I.T.T.E.N.S.-1.png_0: 1064091134773303251
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

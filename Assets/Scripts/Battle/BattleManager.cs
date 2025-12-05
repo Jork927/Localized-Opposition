@@ -1,21 +1,52 @@
+using TMPro;
 using UnityEngine;
 
 public class BattleManager : MonoBehaviour
 {
-    public string turnState;
-    public bool turnActive;
-    public float turnTime;
+    // References
+    [Header("Turn Scripts")]
+    public MonoBehaviour playerTurnScript;
+    public MonoBehaviour[] enemyTurnScripts;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // Battle state variables
+    [Header("Battle State")]
+    public int turnNumber = 0;
+    public string turnState = "Player Turn";
+    public bool turnActive = true;
+    public float turnTime = 0;
+
+    // Debug
+    [Header("Debug")]
+    public GameObject debugText;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
+        // Update turn time if the turn is active
+        if (turnActive)
+        {
+            turnTime += Time.deltaTime;
+
+            switch (turnState)
+            {
+                case "Player Turn":
+                    // Handle player turn logic here
+                    break;
+                case "Enemy Turn":
+                    // Handle enemy turn logic here
+                    break;
+                default:
+                    Debug.LogWarning("Unknown turn state: " + turnState);
+                    break;
+            }
+        }
+
         
+        debugText.GetComponent<TextMeshProUGUI>().text = "Turn: " + turnNumber + "\nState: " + turnState + "\nActive: " + turnActive + "\nTime: " + turnTime.ToString("F2");
     }
 
     /* The battle system will work as follows:

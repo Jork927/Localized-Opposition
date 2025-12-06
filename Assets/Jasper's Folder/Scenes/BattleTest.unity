@@ -136,7 +136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &431660333
 RectTransform:
   m_ObjectHideFlags: 0
@@ -632,9 +632,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1382109168}
   - component: {fileID: 1382109172}
-  - component: {fileID: 1382109171}
-  - component: {fileID: 1382109170}
-  - component: {fileID: 1382109169}
+  - component: {fileID: 1382109173}
   m_Layer: 0
   m_Name: Enemy Turn Scripts
   m_TagString: Untagged
@@ -657,42 +655,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 642559749}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1382109169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1382109167}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73d3a94949e696242a15d485f3d33126, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1382109170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1382109167}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da76c7046e29fee47911b65373c9830d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1382109171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1382109167}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4700ae1238c84445b7921ad43419825, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1382109172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -706,9 +668,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyAttackScripts:
-  - {fileID: 1382109171}
-  - {fileID: 1382109170}
-  - {fileID: 1382109169}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &1382109173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382109167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62c1355b222c434385757c0df62dd0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

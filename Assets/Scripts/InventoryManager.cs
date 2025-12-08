@@ -29,4 +29,18 @@ public class InventoryManager : MonoBehaviour
             savedItems[i]= inventorySlots[i].transform.childCount > 0 ? inventorySlots[i].transform.GetChild(0).GetComponent<InventoryItem>().item : null;
         }
     }
+
+    public void Additem(Item item)
+    {
+        // Find the first empty slot and add the item there
+        for (int i = 0; i < inventorySlots.Length; ++i)
+        {
+            if (inventorySlots[i].transform.childCount == 0)
+            {
+                var GO = Instantiate(inventoryItemPrefab, inventorySlots[i].transform);
+                GO.InitialiseItem(item);
+                return;
+            }
+        }
+    }
 }

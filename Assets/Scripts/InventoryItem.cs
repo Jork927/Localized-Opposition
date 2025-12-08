@@ -42,4 +42,10 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         image.raycastTarget = true;
         transform.SetParent(parentAfterDrag);
     }
+
+    public void Use()
+    {
+        item.onUse.Invoke();
+        Destroy(gameObject);
+    }
 }

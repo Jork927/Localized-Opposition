@@ -5,7 +5,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
 {
     public void StartButton()
     {
-        SceneManager.LoadScene("Tutorial");
+        SceneManager.LoadScene("Level Select");
         Debug.Log("Player pressed button 'Start', loading scene 'Tutorial'");
     }
 

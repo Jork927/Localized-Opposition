@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stackable: 1
   image: {fileID: -6682515874435423343, guid: c953e411508174f4297c7ede4ca185f3, type: 3}
+  onUse:
+    m_PersistentCalls:
+      m_Calls: []

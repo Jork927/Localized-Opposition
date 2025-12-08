@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.Tilemaps;
 
@@ -13,6 +14,13 @@ public class Item : ScriptableObject
 
     [Header("Both")]
     public Sprite image;
+
+    public UnityEvent onUse;
+
+    public void Heal()
+    {
+
+    }
 }
 
 public enum  ItemType

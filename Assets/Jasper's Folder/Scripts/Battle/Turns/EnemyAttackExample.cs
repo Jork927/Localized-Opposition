@@ -37,7 +37,7 @@ public class EnemyAttackExample : MonoBehaviour
                     Debug.Log("Hello World!");
                     break;
 
-                case 3:
+                case 2:
                     battleManager.EndEnemyTurn();
                     break;
             }

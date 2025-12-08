@@ -18,11 +18,11 @@ public class PlayerTurn : MonoBehaviour
 
             switch (battleManager.turnTime)
             {
-                case 1:
+                case 0:
                     Debug.Log("i am player turn script cuz i am player turn scripting");
                     break;
 
-                case 2:
+                case 3:
                     battleManager.EndPlayerTurn();
                     break;
             }

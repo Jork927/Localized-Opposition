@@ -85,19 +85,22 @@ public class BattleManager : MonoBehaviour
             {
                 case "Player Turn":
                     playerTurnScript.Invoke("Turn", 0);
-                break;
+                    break;
 
                 case "Enemy Turn":
                     enemyAttack.Invoke("Attack", 0);
-                break;
+                    break;
 
                 default:
                     Debug.LogWarning("Unknown turn state: " + turnState);
-                break;
+                    break;
             }
         }
 
         // Update debug text
-        debugText.text = "State: " + turnState + "\nActive: " + turnActive + "\nTime: " + turnTime.ToString("F2");
+        debugText.text = "Turn State: " + turnState + "\n" +
+                         "Turn Active: " + turnActive + "\n" +
+                         "Turn Time: " + turnTime + "s\n" +
+                         "Current Script: " + (turnState == "Player Turn" ? playerTurnScript.GetType().Name : enemyAttack.GetType().Name);
     }
 }

@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LEVELS/4servers.unity
     guid: 6e334afc739d724409ff7acab0dfb5ff
+  - enabled: 1
+    path: Assets/Scenes/LEVELS/Credits.unity
+    guid: 322836552b0a480428fcdc9ae0320620
   - enabled: 0
     path: Assets/Scenes/Val's Scene.unity
     guid: d6ad6b294089f4b44bdb62d5cf6021f2

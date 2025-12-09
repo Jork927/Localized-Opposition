@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f704573b3f5f5f4ebffa091cc2a91b4, type: 3}
-  m_Name: Dialogue 1
+  m_Name: Dialogue 3
   m_EditorClassIdentifier: 
   dialogue:
-  - name: M.I.T.T.E.N.S.
-    dialogue: 'Press "E" to interact with objects
+  - name: 'M.I.T.T.E.N.S. '
+    dialogue: 'Obtain items and upgrades from battles
 
 
       Click to continue'

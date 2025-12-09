@@ -10,9 +10,22 @@ public class PlayerStats : MonoBehaviour
     public float invincibilityTime;
     float timeInvincible;
 
-    private void Start()
+    public Color normalColor;
+    public Color hurtColor;
+    SpriteRenderer sr;
+
+    // Sounds
+    [Header("Sounds")]
+    public AudioSource audioSrc;
+    public AudioClip meow;
+    public AudioClip hurtMeow;
+    public AudioClip hurtHit;
+
+    void Start()
     {
         timeInvincible = 0;
+        sr = GetComponentInChildren<SpriteRenderer>();
+        audioSrc = GameObject.Find("Main Camera").GetComponent<AudioSource>();
     }
 
     void Update()
@@ -24,6 +37,12 @@ public class PlayerStats : MonoBehaviour
             {
                 case <= 0:
                     health = 0;
+
+                    if (active)
+                    {
+                        audioSrc.PlayOneShot(hurtHit);
+                    }
+
                     active = false;
                     Debug.Log("Player Defeated");
                     break;
@@ -43,7 +62,28 @@ public class PlayerStats : MonoBehaviour
                     timeInvincible = 0;
                     invincible = false;
                 }
+
+                sr.color = Color.Lerp(hurtColor, normalColor, timeInvincible / invincibilityTime);
             }
+            else
+            {
+                timeInvincible = 0;
+                sr.color = normalColor;
+            }
+        }
+    }
+
+    public void Damage(int amount)
+    {
+        if (!invincible)
+        {
+            audioSrc.PlayOneShot(hurtMeow);
+            audioSrc.pitch = Random.Range(0.75f, 1.25f);
+
+            health -= amount;
+            invincible = true;
+
+            
         }
     }
 }

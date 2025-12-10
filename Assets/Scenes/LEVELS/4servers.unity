@@ -7408,6 +7408,8 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+<<<<<<< HEAD
+=======
 --- !u!1 &1237484326
 GameObject:
   m_ObjectHideFlags: 0
@@ -7495,6 +7497,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0.551, z: 0}
+>>>>>>> 9c9f8d36ab2ddfc668666de4f58fc86d28f67fd8
 --- !u!1 &1257064369
 GameObject:
   m_ObjectHideFlags: 0
@@ -8424,7 +8427,6 @@ SceneRoots:
   - {fileID: 603226480}
   - {fileID: 2121459255}
   - {fileID: 555136788}
-  - {fileID: 1237484328}
   - {fileID: 807493987}
   - {fileID: 623613504}
   - {fileID: 1559852264}

@@ -14,7 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - name: M.I.T.T.E.N.S.
-    dialogue: 'Press "E" to interact with objects
+    dialogue: 'I am Mittens, your loyal robot companion
 
 
       Click to continue'
+  - name: M.I.T.T.E.N.S.
+    dialogue: Follow me and I'll teach you everything you need to know before going
+      to the building
+  - name: M.I.T.T.E.N.S.
+    dialogue: 'You probably already figured this out
+
+      But you can press "E"
+      to interact with things
+
+      You''ll see a popup when theres something to
+      interact with'

@@ -23,7 +23,7 @@ public class DieALog : MonoBehaviour
         dialogueIndex = 0;
         onStart.Invoke();
         Debug.Log("I am working. Hip hip hooray");
-
+        //Time.timeScale = 0f;
         StartCoroutine(WriteDialoguePiece(dialogue.dialogue[0]));
     }
 
@@ -31,6 +31,7 @@ public class DieALog : MonoBehaviour
     {
         onEnd.Invoke();
         me.SetActive(false);
+        //Time.timeScale = 1f;
     }
 
     public void NextDialogueOrStop(InputAction.CallbackContext ctx)

@@ -5,9 +5,23 @@ using UnityEngine.UIElements;
 public class BattleManager : MonoBehaviour
 {
     // References
-    [Header("Turn Scripts")]
+    [Header("References")]
+    public GameObject buttons;
+    public GameObject playerObject;
+    public GameObject bulletBox;
+    public GameObject playerHealthbar;
+    public GameObject enemyNameObject;
+    public GameObject enemyHealthbar;
     MonoBehaviour playerTurnScript; // The player turn script
     EnemyAttackLibrary enemyAttackLibrary; // The enemy attack library
+    public GameObject deathScreen;
+    public GameObject battleObject;
+
+    // Enemy Stats
+    [Header("Enemy Stats")]
+    public string enemyName;
+    public int enemyHealth;
+    public int enemyMaxHealth;
 
     // Battle dependancies
     [Header("Battle Dependancies")]
@@ -17,22 +31,27 @@ public class BattleManager : MonoBehaviour
     public float turnTime; // Rounded turn time for use in other scripts
     MonoBehaviour enemyAttack; // The attack script used during the enemy's turn
 
-    // Debug
-    [Header("Debug")]
-    TextMeshProUGUI debugText; // Debug text UI element
+    // Music
+    [Header("Music")]
+    public AudioClip battleMusic; // Battle music clip
+    AudioSource audioSrc; // Audio source for playing music
 
     void Start()
     {
         // Get references
-        debugText = GameObject.Find("Debug Text").GetComponent<TextMeshProUGUI>();
         playerTurnScript = GameObject.Find("Player Turn Script").GetComponent<PlayerTurn>();
         enemyAttackLibrary = GameObject.Find("Enemy Turn Scripts").GetComponent<EnemyAttackLibrary>();
+        audioSrc = GetComponent<AudioSource>();
+        audioSrc.clip = battleMusic;
+        audioSrc.Play();
 
         StartPlayerTurn();
     }
 
     public void StartPlayerTurn()
     {
+        buttons.SetActive(true);
+
         // Reset turn dependencies
         turnState = "Player Turn";
         turnActive = true;
@@ -43,6 +62,8 @@ public class BattleManager : MonoBehaviour
 
     public void EndPlayerTurn()
     {
+        buttons.SetActive(false);
+
         turnActive = false;
 
         Debug.Log("Player turn ended.");
@@ -52,6 +73,9 @@ public class BattleManager : MonoBehaviour
 
     public void StartEnemyTurn()
     {
+        playerObject.SetActive(true);
+        bulletBox.SetActive(true);
+
         // Reset turn dependencies
         turnState = "Enemy Turn";
         turnActive = true;
@@ -65,11 +89,20 @@ public class BattleManager : MonoBehaviour
 
     public void EndEnemyTurn()
     {
+        playerObject.SetActive(false);
+        bulletBox.SetActive(false);
+
         turnActive = false;
 
         Debug.Log("Enemy turn ended.");
 
         StartPlayerTurn();
+    }
+
+    public void KillPlayer()
+    {
+        deathScreen.SetActive(true);
+        battleObject.SetActive(false);
     }
 
     void Update()
@@ -78,7 +111,7 @@ public class BattleManager : MonoBehaviour
         if (turnActive)
         {
             turnTimeReal += Time.deltaTime; // Update real turn time
-            turnTime = Mathf.Round(turnTimeReal * 10) / 10; // Round to 1 decimal place
+            turnTime = Mathf.Round(turnTimeReal * 100) / 100; // Round turn time to 2 decimal places
 
             // Execute the appropriate turn script
             switch (turnState)
@@ -97,10 +130,16 @@ public class BattleManager : MonoBehaviour
             }
         }
 
-        // Update debug text
-        debugText.text = "Turn State: " + turnState + "\n" +
-                         "Turn Active: " + turnActive + "\n" +
-                         "Turn Time: " + turnTime + "s\n" +
-                         "Current Script: " + (turnState == "Player Turn" ? playerTurnScript.GetType().Name : enemyAttack.GetType().Name);
+        // scale the healthbar for the player which is a rect transform with a width of 400
+        RectTransform playerHealthbarRect = playerHealthbar.GetComponent<RectTransform>();
+        PlayerStats playerStats = playerObject.GetComponent<PlayerStats>();
+        float playerHealthPercent = (float)playerStats.health / playerStats.maxHealth;
+        playerHealthbarRect.sizeDelta = new Vector2(400 * playerHealthPercent, playerHealthbarRect.sizeDelta.y);
+        // scale the healthbar for the enemy which is a rect transform with a width of 400
+        RectTransform enemyHealthbarRect = enemyHealthbar.GetComponent<RectTransform>();
+        float enemyHealthPercent = (float)enemyHealth / enemyMaxHealth;
+        enemyHealthbarRect.sizeDelta = new Vector2(400 * enemyHealthPercent, enemyHealthbarRect.sizeDelta.y);
+        // update enemy name text
+        enemyNameObject.GetComponent<TextMeshProUGUI>().text = enemyName;
     }
 }

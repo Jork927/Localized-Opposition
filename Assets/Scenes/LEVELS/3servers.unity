@@ -7408,8 +7408,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
-<<<<<<< HEAD
-=======
 --- !u!1 &1237484326
 GameObject:
   m_ObjectHideFlags: 0
@@ -7497,7 +7495,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0.551, z: 0}
->>>>>>> 9c9f8d36ab2ddfc668666de4f58fc86d28f67fd8
 --- !u!1 &1257064369
 GameObject:
   m_ObjectHideFlags: 0

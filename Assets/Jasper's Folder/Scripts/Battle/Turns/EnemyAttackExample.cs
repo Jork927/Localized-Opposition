@@ -24,39 +24,71 @@ public class EnemyAttackExample : MonoBehaviour
                     Debug.Log("RANDOM BULLS*** GO!!!\n-Moon Knight");
                     break;
 
-                case 1:
+                case 1f:
                     Instantiate(triBullet, new Vector3(-3, 3, 0), Quaternion.identity);
+                    break;
+
+                case 1.25f:
+                    Instantiate(triBullet, new Vector3(3, 3, 0), Quaternion.identity);
                     break;
 
                 case 1.5f:
-                    Instantiate(triBullet, new Vector3(3, 3, 0), Quaternion.identity);
-                    break;
-
-                case 2:
                     Instantiate(triBullet, new Vector3(3, -3, 0), Quaternion.identity);
                     break;
 
-                case 2.5f:
+                case 1.75f:
                     Instantiate(triBullet, new Vector3(-3, -3, 0), Quaternion.identity);
                     break;
 
-                case 3:
+                case 2f:
                     Instantiate(triBullet, new Vector3(-3, 3, 0), Quaternion.identity);
                     break;
 
-                case 3.5f:
+                case 2.25f:
                     Instantiate(triBullet, new Vector3(3, 3, 0), Quaternion.identity);
                     break;
 
-                case 4:
+                case 2.5f:
                     Instantiate(triBullet, new Vector3(3, -3, 0), Quaternion.identity);
                     break;
 
-                case 4.5f:
+                case 2.75f:
                     Instantiate(triBullet, new Vector3(-3, -3, 0), Quaternion.identity);
                     break;
 
-                case 5:
+                case 3f:
+                    Instantiate(triBullet, new Vector3(-3, 3, 0), Quaternion.identity);
+                    break;
+
+                case 3.25f:
+                    Instantiate(triBullet, new Vector3(3, 3, 0), Quaternion.identity);
+                    break;
+
+                case 3.5f:
+                    Instantiate(triBullet, new Vector3(3, -3, 0), Quaternion.identity);
+                    break;
+
+                case 3.75f:
+                    Instantiate(triBullet, new Vector3(-3, -3, 0), Quaternion.identity);
+                    break;
+
+                case 4f:
+                    Instantiate(triBullet, new Vector3(-3, 3, 0), Quaternion.identity);
+                    break;
+
+                case 4.25f:
+                    Instantiate(triBullet, new Vector3(3, 3, 0), Quaternion.identity);
+                    break;
+
+                case 4.5f:
+                    Instantiate(triBullet, new Vector3(3, -3, 0), Quaternion.identity);
+                    break;
+
+                case 4.75f:
+                    Instantiate(triBullet, new Vector3(-3, -3, 0), Quaternion.identity);
+                    break;
+
+                case 5f:
                     Instantiate(triBullet, new Vector3(-3, 3, 0), Quaternion.identity);
                     break;
 

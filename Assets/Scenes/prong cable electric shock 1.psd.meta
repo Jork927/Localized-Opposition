@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      prong cable electric shock 1_0: 479359612016051923
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

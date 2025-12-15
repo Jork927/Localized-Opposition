@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Endpoint : MonoBehaviour
 {
-
+    private bool hasKeycard = false;
     [SerializeField] private string level;
 
 

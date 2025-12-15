@@ -28,7 +28,7 @@ public class Movement : MonoBehaviour
 
     // Called once per physics frame - used for physics (we'll use for our movement)
 
-    private void FixedUpdate()
+    private void LateUpdate()
     {
         rb.linearVelocity = input * speed;
 

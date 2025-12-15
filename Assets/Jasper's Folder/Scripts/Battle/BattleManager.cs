@@ -91,12 +91,25 @@ public class BattleManager : MonoBehaviour
     {
         playerObject.SetActive(false);
         bulletBox.SetActive(false);
+        DestroyBullets();
 
         turnActive = false;
 
         Debug.Log("Enemy turn ended.");
 
         StartPlayerTurn();
+    }
+
+    public void DestroyBullets()
+    {
+        // Find all objects with the tag "Battle Bullet" and destroy them
+        GameObject[] objectsToDestroy = GameObject.FindGameObjectsWithTag("Battle Bullet");
+
+        // Destroy each object
+        foreach (GameObject obj in objectsToDestroy)
+        {
+            Destroy(obj);
+        }
     }
 
     public void KillPlayer()

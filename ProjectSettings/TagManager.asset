@@ -4,7 +4,8 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Bullet
+  - Battle Bullet
+  - Battle Attack Bar
   layers:
   - Default
   - TransparentFX

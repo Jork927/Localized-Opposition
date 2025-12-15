@@ -5022,7 +5022,7 @@ GameObject:
   - component: {fileID: 6814471877562836091}
   m_Layer: 0
   m_Name: Triangle Bullet
-  m_TagString: Untagged
+  m_TagString: Battle Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -92,7 +92,7 @@ public class EnemyAttackExample : MonoBehaviour
                     Instantiate(triBullet, new Vector3(-3, 3, 0), Quaternion.identity);
                     break;
 
-                case 6:
+                case 7:
                     battleManager.EndEnemyTurn();
                     break;
             }

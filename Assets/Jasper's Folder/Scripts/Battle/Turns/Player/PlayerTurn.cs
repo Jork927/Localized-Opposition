@@ -2,11 +2,12 @@ using UnityEngine;
 
 public class PlayerTurn : MonoBehaviour
 {
-    public string turnState;
-
+    string turnState;
 
     BattleManager battleManager;
     float lastTurnTime = -0.1f;
+
+    public GameObject inventory;
 
     void Start()
     {
@@ -30,6 +31,7 @@ public class PlayerTurn : MonoBehaviour
     {
         turnState = "Fight";
         battleManager.buttons.SetActive(false);
+        battleManager.attackBox.SetActive(true);
         Debug.Log("Player chose to Fight!");
     }
 
@@ -38,5 +40,6 @@ public class PlayerTurn : MonoBehaviour
         turnState = "Item";
         battleManager.buttons.SetActive(false);
         Debug.Log("Player chose to use an Item!");
+        inventory.SetActive(true);
     }
 }

@@ -14,6 +14,8 @@ public class EnemyAttackExample : MonoBehaviour
 
     public void Attack()
     {
+        battleManager.bulletBox.transform.Rotate(0, 0, 90 * Time.deltaTime);
+
         if (battleManager.turnTime != lastTurnTime)
         {
             lastTurnTime = battleManager.turnTime;
@@ -22,6 +24,7 @@ public class EnemyAttackExample : MonoBehaviour
             {
                 case 0:
                     Debug.Log("RANDOM BULLS*** GO!!!\n-Moon Knight");
+                    battleManager.bulletBox.transform.rotation = Quaternion.Euler(0, 0, 0);
                     break;
 
                 case 1f:

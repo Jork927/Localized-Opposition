@@ -13,7 +13,7 @@ public class LevelMenu : MonoBehaviour
     {
         int unlockedLevels = PlayerPrefs.GetInt("unlockedLevels", 1);
 
-        for (int i = 0; i < unlockedLevels; i++)
+        for (int i = 3; i < unlockedLevels; i++)
         {
             buttons[i].interactable = true;
         }

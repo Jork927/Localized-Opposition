@@ -48,4 +48,12 @@ public class LevelSelect : MonoBehaviour
     {
         SceneManager.LoadScene("StartMenu");
     }
+
+    public void ResetData()
+    {
+        PlayerPrefs.DeleteAll();
+        Debug.Log("Data Reset");
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }

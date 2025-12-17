@@ -15,17 +15,38 @@ EditorBuildSettings:
     path: Assets/Scenes/LEVELS/Tutorial.unity
     guid: 58add5205d38d57408a1dcf40844b4eb
   - enabled: 1
-    path: Assets/Scenes/LEVELS/Level 3.unity
+    path: Assets/Scenes/LEVELS/1ground.unity
     guid: 94a8c8c35e36df44899504379f42440e
   - enabled: 1
-    path: Assets/Scenes/LEVELS/Level 4.unity
+    path: Assets/Scenes/LEVELS/2basement.unity
     guid: ee9bc8f67036cbc4393cdf7f353cfd26
   - enabled: 1
-    path: Assets/Scenes/LEVELS/Level 5.unity
-    guid: 772195d2f211f1f4f9debd66cf1e9234
-  - enabled: 1
-    path: Assets/Scenes/LEVELS/Level 6.unity
+    path: Assets/Scenes/LEVELS/3servers.unity
     guid: 6e334afc739d724409ff7acab0dfb5ff
+  - enabled: 1
+    path: Assets/Scenes/LEVELS/credit scenes/Credits.unity
+    guid: 322836552b0a480428fcdc9ae0320620
+  - enabled: 1
+    path: Assets/Scenes/LEVELS/credit scenes/Amy.unity
+    guid: 16f4ad63d69efb346ac863f37f2fae41
+  - enabled: 1
+    path: Assets/Scenes/LEVELS/credit scenes/Cherri.unity
+    guid: fd03fd80c2959084c9e8346b331745ed
+  - enabled: 1
+    path: Assets/Scenes/LEVELS/credit scenes/Jack.unity
+    guid: 31334fb2bc3b1d74a9571b4efc78449b
+  - enabled: 1
+    path: Assets/Scenes/LEVELS/credit scenes/Jasper.unity
+    guid: af123f11cef42e342a1f0e70e2960cb9
+  - enabled: 1
+    path: Assets/Scenes/LEVELS/credit scenes/Johanna.unity
+    guid: 0da9ab47adabfc6499618ebb5153d834
+  - enabled: 1
+    path: Assets/Scenes/LEVELS/credit scenes/RIan.unity
+    guid: d18f1f73357e6bc47b68ee70c9e66a69
+  - enabled: 1
+    path: Assets/Scenes/LEVELS/credit scenes/Val.unity
+    guid: 90b3a60eb3ab71044a7ccfa2c062faa7
   - enabled: 0
     path: Assets/Scenes/Val's Scene.unity
     guid: d6ad6b294089f4b44bdb62d5cf6021f2

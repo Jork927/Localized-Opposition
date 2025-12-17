@@ -7,6 +7,7 @@ public class Movement : MonoBehaviour
     public float speed = 0.5f;
     private Rigidbody2D rb;
     private Vector2 input;
+    public ParticleSystem dust;
 
     // Start is called before the first frame update
 
@@ -27,8 +28,18 @@ public class Movement : MonoBehaviour
 
     // Called once per physics frame - used for physics (we'll use for our movement)
 
-    private void FixedUpdate()
+    private void LateUpdate()
     {
         rb.linearVelocity = input * speed;
+
+        if (rb.linearVelocity.magnitude > 0)
+        {
+            if(!dust.isPlaying)
+                dust.Play();
+        }
+        else
+        {
+            dust.Stop();
+        }
     }
 }

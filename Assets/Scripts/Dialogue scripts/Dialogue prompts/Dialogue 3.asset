@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - name: 'M.I.T.T.E.N.S. '
-    dialogue: 'Obtain items and upgrades from battles
+    dialogue: 'You''ll get items and upgrades from battles
 
 
       Click to continue'

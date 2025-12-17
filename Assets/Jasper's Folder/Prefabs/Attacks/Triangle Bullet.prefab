@@ -5192,3 +5192,4 @@ MonoBehaviour:
   moveSpeed: 5
   triangle: {fileID: 1957129428538804069}
   shootSound: {fileID: 8300000, guid: ea0919fd2ae5b454bb4d270a26b185ff, type: 3}
+  damageAmount: 20

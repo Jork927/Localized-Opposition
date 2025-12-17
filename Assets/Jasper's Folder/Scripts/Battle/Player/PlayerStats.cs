@@ -10,6 +10,8 @@ public class PlayerStats : MonoBehaviour
     public bool invincible;
     public float invincibilityTime;
     float timeInvincible;
+    public int minAttackDamage;
+    public int maxAttackDamage;
 
     public Color normalColor;
     public Color hurtColor;

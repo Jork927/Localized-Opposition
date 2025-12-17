@@ -9,6 +9,8 @@ public class BattleManager : MonoBehaviour
     public GameObject buttons;
     public GameObject playerObject;
     public GameObject bulletBox;
+    public GameObject attackBox;
+    public GameObject inventory;
     public GameObject playerHealthbar;
     public GameObject enemyNameObject;
     public GameObject enemyHealthbar;
@@ -63,6 +65,8 @@ public class BattleManager : MonoBehaviour
     public void EndPlayerTurn()
     {
         buttons.SetActive(false);
+        attackBox.SetActive(false);
+        inventory.SetActive(false);
 
         turnActive = false;
 

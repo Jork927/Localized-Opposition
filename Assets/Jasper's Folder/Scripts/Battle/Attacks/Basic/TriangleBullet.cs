@@ -10,6 +10,7 @@ public class TriangleBullet : MonoBehaviour
 
     AudioSource audioSrc;
     public AudioClip shootSound;
+    public int damageAmount;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -32,7 +33,7 @@ public class TriangleBullet : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             // Damage player here
-            GameObject.Find("Player").GetComponent<PlayerStats>().Damage(30);
+            GameObject.Find("Player").GetComponent<PlayerStats>().Damage(damageAmount);
             Destroy(gameObject);
         }
     }

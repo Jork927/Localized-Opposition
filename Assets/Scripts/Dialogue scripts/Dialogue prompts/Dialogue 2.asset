@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - name: 'M.I.T.T.E.N.S. '
-    dialogue: 'Press the backpack icon to access your inventory
+    dialogue: 'Press the backpack icon to access your inventory, then click anywhere
+      outside it to exit
 
 
-      Click to
-      continue'
+      Click to continue'

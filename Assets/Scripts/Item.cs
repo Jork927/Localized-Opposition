@@ -15,6 +15,7 @@ public class Item : ScriptableObject
     [Header("Both")]
     public Sprite image;
 
+    public UnityEvent onGrab;
     public UnityEvent onUse;
 
     public int healingAmount;
@@ -34,6 +35,11 @@ public class Item : ScriptableObject
 
             battleManager.EndPlayerTurn();
         }
+    }
+
+    public void KeyCard()
+    {
+        FindFirstObjectByType<Endpoint>(FindObjectsInactive.Include).hasKeycard = true;
     }
 }
 

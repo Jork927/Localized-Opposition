@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fb18ea10937dcbe4c87865207fe9188e
+guid: 450bb6aa82897c941b43a9e9bc7b467f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7378555878906502856
-    second: elevator buttons_0
+      213: -5225330605084381413
+    second: GRASSSS 4x4_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 80
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: elevator buttons_0
+      name: GRASSSS 4x4_0
       rect:
         serializedVersion: 2
         x: 0
@@ -141,8 +141,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8ce97958a75e56660800000000000000
-      internalID: 7378555878906502856
+      spriteID: b1fe7f9ef75eb77b0800000000000000
+      internalID: -5225330605084381413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GRASSSS 4x4_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f9cec337d3456b42b6b9315a5c24480
+      internalID: -1398594110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GRASSSS 4x4_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 619507199faacbf4d83d3b04c4508584
+      internalID: -1807531150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GRASSSS 4x4_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e71692bfc07deb74b9b1467f931ebe70
+      internalID: -205613284
       vertices: []
       indices: 
       edges: []
@@ -151,7 +217,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: d3cb989040a430b4dad0158d1e31a169
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +227,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      elevator buttons_0: 7378555878906502856
+      GRASSSS 4x4_0: -5225330605084381413
+      GRASSSS 4x4_1: -1398594110
+      GRASSSS 4x4_2: -1807531150
+      GRASSSS 4x4_3: -205613284
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

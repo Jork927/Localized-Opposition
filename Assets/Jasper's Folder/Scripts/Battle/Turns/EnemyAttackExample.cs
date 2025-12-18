@@ -14,6 +14,8 @@ public class EnemyAttackExample : MonoBehaviour
 
     public void Attack()
     {
+        battleManager.bulletBox.transform.Rotate(0, 0, 90 * Time.deltaTime);
+
         if (battleManager.turnTime != lastTurnTime)
         {
             lastTurnTime = battleManager.turnTime;
@@ -22,45 +24,78 @@ public class EnemyAttackExample : MonoBehaviour
             {
                 case 0:
                     Debug.Log("RANDOM BULLS*** GO!!!\n-Moon Knight");
+                    battleManager.bulletBox.transform.rotation = Quaternion.Euler(0, 0, 0);
                     break;
 
-                case 1:
+                case 1f:
                     Instantiate(triBullet, new Vector3(-3, 3, 0), Quaternion.identity);
+                    break;
+
+                case 1.25f:
+                    Instantiate(triBullet, new Vector3(3, 3, 0), Quaternion.identity);
                     break;
 
                 case 1.5f:
-                    Instantiate(triBullet, new Vector3(3, 3, 0), Quaternion.identity);
+                    Instantiate(triBullet, new Vector3(3, -3, 0), Quaternion.identity);
                     break;
 
-                case 2:
-                    Instantiate(triBullet, new Vector3(3, -3, 0), Quaternion.identity);
+                case 1.75f:
+                    Instantiate(triBullet, new Vector3(-3, -3, 0), Quaternion.identity);
+                    break;
+
+                case 2f:
+                    Instantiate(triBullet, new Vector3(-3, 3, 0), Quaternion.identity);
+                    break;
+
+                case 2.25f:
+                    Instantiate(triBullet, new Vector3(3, 3, 0), Quaternion.identity);
                     break;
 
                 case 2.5f:
-                    Instantiate(triBullet, new Vector3(-3, -3, 0), Quaternion.identity);
-                    break;
-
-                case 3:
-                    Instantiate(triBullet, new Vector3(-3, 3, 0), Quaternion.identity);
-                    break;
-
-                case 3.5f:
-                    Instantiate(triBullet, new Vector3(3, 3, 0), Quaternion.identity);
-                    break;
-
-                case 4:
                     Instantiate(triBullet, new Vector3(3, -3, 0), Quaternion.identity);
                     break;
 
-                case 4.5f:
+                case 2.75f:
                     Instantiate(triBullet, new Vector3(-3, -3, 0), Quaternion.identity);
                     break;
 
-                case 5:
+                case 3f:
                     Instantiate(triBullet, new Vector3(-3, 3, 0), Quaternion.identity);
                     break;
 
-                case 6:
+                case 3.25f:
+                    Instantiate(triBullet, new Vector3(3, 3, 0), Quaternion.identity);
+                    break;
+
+                case 3.5f:
+                    Instantiate(triBullet, new Vector3(3, -3, 0), Quaternion.identity);
+                    break;
+
+                case 3.75f:
+                    Instantiate(triBullet, new Vector3(-3, -3, 0), Quaternion.identity);
+                    break;
+
+                case 4f:
+                    Instantiate(triBullet, new Vector3(-3, 3, 0), Quaternion.identity);
+                    break;
+
+                case 4.25f:
+                    Instantiate(triBullet, new Vector3(3, 3, 0), Quaternion.identity);
+                    break;
+
+                case 4.5f:
+                    Instantiate(triBullet, new Vector3(3, -3, 0), Quaternion.identity);
+                    break;
+
+                case 4.75f:
+                    Instantiate(triBullet, new Vector3(-3, -3, 0), Quaternion.identity);
+                    break;
+
+                case 5f:
+                    Instantiate(triBullet, new Vector3(-3, 3, 0), Quaternion.identity);
+                    break;
+
+                case 7:
                     battleManager.EndEnemyTurn();
                     break;
             }

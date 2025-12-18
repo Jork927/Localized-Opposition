@@ -10,13 +10,14 @@ public class TriangleBullet : MonoBehaviour
 
     AudioSource audioSrc;
     public AudioClip shootSound;
+    public int damageAmount;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         target = GameObject.Find("Player");
         direction = (target.transform.position - transform.position).normalized;
-        audioSrc = GameObject.Find("Main Camera").GetComponent<AudioSource>();
+        audioSrc = GetComponent<AudioSource>();
         audioSrc.PlayOneShot(shootSound);
     }
 
@@ -24,7 +25,7 @@ public class TriangleBullet : MonoBehaviour
     void FixedUpdate()
     {
         transform.Translate(direction * moveSpeed * Time.deltaTime);
-        triangle.transform.Rotate(0, 0, 360 * moveSpeed * Time.deltaTime);
+        triangle.transform.Rotate(0, 0, 360 * (moveSpeed / 2) * Time.deltaTime);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -32,7 +33,7 @@ public class TriangleBullet : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             // Damage player here
-            GameObject.Find("Player").GetComponent<PlayerStats>().Damage(10);
+            GameObject.Find("Player").GetComponent<PlayerStats>().Damage(damageAmount);
             Destroy(gameObject);
         }
     }

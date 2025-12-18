@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Endpoint : MonoBehaviour
 {
-    private bool hasKeycard = false;
+    public bool hasKeycard = false;
     [SerializeField] private string level;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player")&& hasKeycard)
         {
             UnlockNewLevel();
             SceneManager.LoadScene(level);

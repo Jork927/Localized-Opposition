@@ -18,5 +18,6 @@ public class ItemInstance : MonoBehaviour
     {
         FindFirstObjectByType< InventoryManager>().Additem(data);
         Destroy(gameObject);
+        data.onGrab.Invoke();
     }
 }

@@ -285,7 +285,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spritesheet_M.I.T.T.E.N.S._WALKCYCLE_0: 4910921638743700123
+      spritesheet_M.I.T.T.E.N.S._WALKCYCLE_1: -4046044398665050627
+      spritesheet_M.I.T.T.E.N.S._WALKCYCLE_2: -1448293987287308600
+      spritesheet_M.I.T.T.E.N.S._WALKCYCLE_3: -4200137558438661075
+      spritesheet_M.I.T.T.E.N.S._WALKCYCLE_4: -4623229760321085974
+      spritesheet_M.I.T.T.E.N.S._WALKCYCLE_5: 1631660525503301505
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -535,7 +535,23 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spritesheet_MITguy_WALKCYCLE_0: 750258295741020552
+      spritesheet_MITguy_WALKCYCLE_1: 4904332045705363482
+      spritesheet_MITguy_WALKCYCLE_10: 9163324607932251477
+      spritesheet_MITguy_WALKCYCLE_11: -4053398130666039236
+      spritesheet_MITguy_WALKCYCLE_12: 5609676237656368614
+      spritesheet_MITguy_WALKCYCLE_13: 5001427216920847593
+      spritesheet_MITguy_WALKCYCLE_14: -1514327988057349241
+      spritesheet_MITguy_WALKCYCLE_15: 4488729919667890870
+      spritesheet_MITguy_WALKCYCLE_2: 1171937329624313111
+      spritesheet_MITguy_WALKCYCLE_3: 4964661146198241604
+      spritesheet_MITguy_WALKCYCLE_4: -3129062812608153483
+      spritesheet_MITguy_WALKCYCLE_5: -6962300619448137437
+      spritesheet_MITguy_WALKCYCLE_6: -6869515956175783003
+      spritesheet_MITguy_WALKCYCLE_7: -8160863260091617264
+      spritesheet_MITguy_WALKCYCLE_8: 8311204109715775951
+      spritesheet_MITguy_WALKCYCLE_9: 2044055723848412073
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

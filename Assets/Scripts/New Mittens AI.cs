@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class NewMittensAI : MonoBehaviour
 {
     public float moveSpeed = 2f;
@@ -10,6 +11,7 @@ public class NewMittensAI : MonoBehaviour
     Transform target;
     Vector2 moveDirection;
     public Vector3 offset = new(1, 0);
+    public float chaseRange = 5f;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -27,7 +29,7 @@ public class NewMittensAI : MonoBehaviour
 
     private void Update()
     {
-        if (target)
+        if (target&&Vector2.Distance(target.position, transform.position)<chaseRange)
         {
             Vector3 direction = (target.position - (Vector3)transform.position + offset).normalized;
             moveDirection = direction;
@@ -38,12 +40,16 @@ public class NewMittensAI : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (target)
+        if (target && Vector2.Distance(target.position, transform.position) < chaseRange)
         {
             rb.linearVelocity = new Vector2(moveDirection.x, moveDirection.y) * moveSpeed;
         }
     }
 
+    void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, chaseRange);
+    }
 
 }
 

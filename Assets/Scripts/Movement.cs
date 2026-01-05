@@ -8,12 +8,15 @@ public class Movement : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 input;
     public ParticleSystem dust;
+    private Animator animator;
 
     // Start is called before the first frame update
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+    animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame - used for inputs and timers
@@ -23,12 +26,19 @@ public class Movement : MonoBehaviour
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
         input.Normalize(); // Makes the diagonal movement move the same as the other movements
-                           // Without normalize, diagonal movement would be faster
+                           // Without normalize, diagonal movement would be faste
+        float horizontalInput = Input.GetAxis("Horizontal");
+
+        transform.position += new Vector3(horizontalInput * speed * Time.deltaTime, 0, 0);
+
+        animator.SetFloat("Horizontal", input.x);
+        animator.SetFloat("Vertical", input.y);
+
     }
 
     // Called once per physics frame - used for physics (we'll use for our movement)
 
-    private void FixedUpdate()
+    private void LateUpdate()
     {
         rb.linearVelocity = input * speed;
 

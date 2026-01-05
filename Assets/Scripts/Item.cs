@@ -15,11 +15,31 @@ public class Item : ScriptableObject
     [Header("Both")]
     public Sprite image;
 
+    public UnityEvent onGrab;
     public UnityEvent onUse;
+
+    public int healingAmount;
 
     public void Heal()
     {
+        // Heal the player
+        PlayerStats stats = FindFirstObjectByType<PlayerStats>(FindObjectsInactive.Include);
+        stats.health += healingAmount;
 
+        // End the player's turn if in battle
+        GameObject obj = GameObject.Find("Battle Manager");
+
+        if (obj != null)
+        {
+            BattleManager battleManager = obj.GetComponent<BattleManager>();
+
+            battleManager.EndPlayerTurn();
+        }
+    }
+
+    public void KeyCard()
+    {
+        FindFirstObjectByType<Endpoint>(FindObjectsInactive.Include).hasKeycard = true;
     }
 }
 

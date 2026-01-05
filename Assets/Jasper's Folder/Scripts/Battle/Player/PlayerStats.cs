@@ -6,9 +6,12 @@ public class PlayerStats : MonoBehaviour
     [Header("Player Stats")]
     public bool active;
     public int health;
+    public int maxHealth;
     public bool invincible;
     public float invincibilityTime;
     float timeInvincible;
+    public int minAttackDamage;
+    public int maxAttackDamage;
 
     public Color normalColor;
     public Color hurtColor;
@@ -16,7 +19,7 @@ public class PlayerStats : MonoBehaviour
 
     // Sounds
     [Header("Sounds")]
-    public AudioSource audioSrc;
+    AudioSource audioSrc;
     public AudioClip meow;
     public AudioClip hurtMeow;
     public AudioClip hurtHit;
@@ -25,31 +28,32 @@ public class PlayerStats : MonoBehaviour
     {
         timeInvincible = 0;
         sr = GetComponentInChildren<SpriteRenderer>();
-        audioSrc = GameObject.Find("Main Camera").GetComponent<AudioSource>();
+        audioSrc = GetComponent<AudioSource>();
     }
 
     void Update()
     {
         if (active)
         {
-            switch (health
-            )
+            if (health <= 0)
             {
-                case <= 0:
-                    health = 0;
+                health = 0;
 
-                    if (active)
-                    {
-                        audioSrc.PlayOneShot(hurtHit);
-                    }
+                if (active)
+                {
+                    audioSrc.PlayOneShot(hurtHit);
+                }
 
-                    active = false;
-                    Debug.Log("Player Defeated");
-                    break;
+                active = false;
+                Debug.Log("Player Defeated");
 
-                case > 100:
-                    health = 100;
-                    break;
+                BattleManager battleManager = GameObject.Find("Battle Manager").GetComponent<BattleManager>();
+                battleManager.KillPlayer();
+            }
+
+            if (health > maxHealth)
+            {
+                health = maxHealth;
             }
 
             // Invincibility
@@ -78,12 +82,10 @@ public class PlayerStats : MonoBehaviour
         if (!invincible)
         {
             audioSrc.PlayOneShot(hurtMeow);
-            audioSrc.pitch = Random.Range(0.75f, 1.25f);
+            audioSrc.pitch = Random.Range(1, 2f);
 
             health -= amount;
             invincible = true;
-
-            
         }
     }
 }

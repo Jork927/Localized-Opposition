@@ -36,4 +36,9 @@ public class CreditsManager : MonoBehaviour
     {
         SceneManager.LoadScene("StartMenu");
     }
+
+    public void BackButton()
+    {
+        SceneManager.LoadScene("Credits");
+    }
 }

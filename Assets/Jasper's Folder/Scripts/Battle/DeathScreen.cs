@@ -53,8 +53,7 @@ public class DeathScreen : MonoBehaviour
 
     public void RestartBattle()
     {
-
-
+        Debug.Log("big penis");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

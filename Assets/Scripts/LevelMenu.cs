@@ -29,8 +29,6 @@ public class LevelMenu : MonoBehaviour
     public void OpenLevel(int levelId)
     {
         string levelName = "Level" + levelId;
-        StartPosition.doReload = true;
-
         SceneManager.LoadScene(levelId);
     }
 

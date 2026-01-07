@@ -18,3 +18,8 @@ MonoBehaviour:
 
 
       Click to continue'
+  - name: 'M.I.T.T.E.N.S. '
+    dialogue: 'You can attack or use an item to heal/upgrade M.I.T.T.E.N.S.
+
+      Or
+      attack to deal damage'

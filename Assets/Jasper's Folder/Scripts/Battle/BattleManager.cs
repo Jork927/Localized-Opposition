@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class BattleManager : MonoBehaviour
@@ -144,6 +145,11 @@ public class BattleManager : MonoBehaviour
                 default:
                     Debug.LogWarning("Unknown turn state: " + turnState);
                     break;
+            }
+            if (enemyHealth <= 0)
+            {
+                Debug.Log("Enemy defeated!");
+                SceneManager.LoadScene("Level Select");
             }
         }
 

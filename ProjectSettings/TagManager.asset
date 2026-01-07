@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Battle Bullet
   - Battle Attack Bar
+  - Enemy
   layers:
   - Default
   - TransparentFX

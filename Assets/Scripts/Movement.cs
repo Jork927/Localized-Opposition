@@ -7,7 +7,7 @@ public class Movement : MonoBehaviour
     public float speed = 0.5f;
     private Rigidbody2D rb;
     private Vector2 input;
-    public ParticleSystem dust;
+    
     private Animator animator;
 
     // Start is called before the first frame update
@@ -16,7 +16,7 @@ public class Movement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 
-    animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame - used for inputs and timers
@@ -41,15 +41,6 @@ public class Movement : MonoBehaviour
     private void LateUpdate()
     {
         rb.linearVelocity = input * speed;
-
-        if (rb.linearVelocity.magnitude > 0)
-        {
-            if(!dust.isPlaying)
-                dust.Play();
-        }
-        else
-        {
-            dust.Stop();
-        }
     }
 }
+    

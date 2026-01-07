@@ -9,14 +9,18 @@ public class Movement : MonoBehaviour
     private Vector2 input;
     public ParticleSystem dust;
     private Animator animator;
+    public static Vector2 Lastpos;
+    public static string currentScene;
 
     // Start is called before the first frame update
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
 
-    animator = GetComponent<Animator>();
+        transform.position = Lastpos;
+        currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
     }
 
     // Update is called once per frame - used for inputs and timers
@@ -51,5 +55,10 @@ public class Movement : MonoBehaviour
         {
             dust.Stop();
         }
+    }
+
+    private void OnDestroy()
+    {
+        Lastpos=transform.position;
     }
 }

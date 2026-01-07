@@ -840,7 +840,7 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 25
+    angle: 50
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -1151,7 +1151,7 @@ ParticleSystem:
     m_BurstCount: 0
     m_Bursts: []
   SizeModule:
-    enabled: 0
+    enabled: 1
     curve:
       serializedVersion: 2
       minMaxState: 1
@@ -1162,18 +1162,18 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0
+          value: 1
           inSlope: 0
-          outSlope: 1
+          outSlope: 0
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
           time: 1
-          value: 1
+          value: 0
           inSlope: 1
-          outSlope: 0
+          outSlope: 1
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
@@ -5019,9 +5019,9 @@ GameObject:
   - component: {fileID: 2039464368321608507}
   - component: {fileID: 1887480869617483768}
   - component: {fileID: 7408822953884413460}
-  - component: {fileID: 6814471877562836091}
+  - component: {fileID: 3686391354150112165}
   m_Layer: 0
-  m_Name: Triangle Bullet
+  m_Name: Homing Bullet
   m_TagString: Battle Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5177,7 +5177,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &6814471877562836091
+--- !u!114 &3686391354150112165
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5189,7 +5189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0d0d7e35b481f747a9907daf193798c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  triangle: {fileID: 1957129428538804069}
+  child: {fileID: 1957129428538804069}
+  speed: 0
   shootSound: {fileID: 8300000, guid: ea0919fd2ae5b454bb4d270a26b185ff, type: 3}
   damageAmount: 20

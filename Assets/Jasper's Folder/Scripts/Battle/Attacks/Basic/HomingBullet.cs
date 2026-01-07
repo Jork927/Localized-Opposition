@@ -1,12 +1,12 @@
 using Unity.Cinemachine;
 using UnityEngine;
 
-public class TriangleBullet : MonoBehaviour
+public class HomingBullet : MonoBehaviour
 {
+    public GameObject child;
     GameObject target;
     Vector2 direction;
-    public float moveSpeed;
-    public GameObject triangle;
+    public float speed;
 
     AudioSource audioSrc;
     public AudioClip shootSound;
@@ -24,8 +24,8 @@ public class TriangleBullet : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.Translate(direction * moveSpeed * Time.deltaTime);
-        triangle.transform.Rotate(0, 0, 360 * (moveSpeed / 2) * Time.deltaTime);
+        transform.Translate(direction * speed * Time.deltaTime);
+        child.transform.Rotate(0, 0, 720 * Time.deltaTime);
     }
 
     void OnTriggerEnter2D(Collider2D collision)

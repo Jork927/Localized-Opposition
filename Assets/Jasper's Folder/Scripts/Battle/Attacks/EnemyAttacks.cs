@@ -5,11 +5,12 @@ public class EnemyAttacks : MonoBehaviour
     public GameObject bullet;
     public GameObject homingBullet;
 
-    public void NewBullet(Vector2 position, float horizontalSpeed, float verticalSpeed, int damageAmount)
+    public void NewBullet(Vector2 position, float scale, float horizontalSpeed, float verticalSpeed, int damageAmount)
     {
         GameObject newBullet = Instantiate(bullet, position, Quaternion.identity);
         Bullet bulletScript = newBullet.GetComponent<Bullet>();
 
+        newBullet.transform.localScale = new Vector2(scale / 2, scale / 2);
         bulletScript.horizontalSpeed = horizontalSpeed;
         bulletScript.verticalSpeed = verticalSpeed;
         bulletScript.damageAmount = damageAmount;

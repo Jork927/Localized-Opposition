@@ -1208,7 +1208,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &419328529
 Transform:
   m_ObjectHideFlags: 0
@@ -8263,7 +8263,7 @@ GameObject:
   - component: {fileID: 1382109168}
   - component: {fileID: 1382109174}
   - component: {fileID: 1382109172}
-  - component: {fileID: 1382109173}
+  - component: {fileID: 1382109175}
   m_Layer: 0
   m_Name: Enemy Turn Scripts
   m_TagString: Untagged
@@ -8299,19 +8299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyAttackScripts:
-  - {fileID: 1382109173}
---- !u!114 &1382109173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1382109167}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a62c1355b222c434385757c0df62dd0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  - {fileID: 1382109175}
 --- !u!114 &1382109174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8326,6 +8314,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 5444875433439889913, guid: 768250857c20a384c9d29e0da1e8e8b3, type: 3}
   homingBullet: {fileID: 5444875433439889913, guid: c6dcce3dd80163c4785583c461d1343b, type: 3}
+--- !u!114 &1382109175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382109167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9eef501b3c42ed4cb15fb5346c3a256, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletScale: 1.25
+  bulletSpeed: 4
 --- !u!1 &1384340274
 GameObject:
   m_ObjectHideFlags: 0

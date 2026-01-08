@@ -1,9 +1,11 @@
 using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class HomingBullet : MonoBehaviour
 {
     public GameObject child;
+    public GameObject emitter;
     GameObject target;
     Vector2 direction;
     public float speed;
@@ -18,12 +20,13 @@ public class HomingBullet : MonoBehaviour
         target = GameObject.Find("Player");
         direction = (target.transform.position - transform.position).normalized;
         audioSrc = GetComponent<AudioSource>();
-        audioSrc.PlayOneShot(shootSound);
+        //audioSrc.PlayOneShot(shootSound);
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        emitter.transform.localScale = transform.localScale / 3;
         transform.Translate(direction * speed * Time.deltaTime);
         child.transform.Rotate(0, 0, 720 * Time.deltaTime);
     }

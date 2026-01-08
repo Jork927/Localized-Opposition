@@ -9,6 +9,9 @@ public class BasicAttack1 : MonoBehaviour
 
     int side;
     int varient;
+    static int lastSide = -1;
+    static int lastVariant = -1;
+
     int y;
     public float bulletScale;
     public float bulletSpeed;
@@ -53,7 +56,7 @@ public class BasicAttack1 : MonoBehaviour
                     MakeBullets();
                     break;
 
-                case 7f:
+                case 7.5f:
                     battleManager.EndEnemyTurn();
                     break;
             }
@@ -62,8 +65,17 @@ public class BasicAttack1 : MonoBehaviour
 
     void MakeBullets()
     {
-        side = Random.Range(1, 2);
-        varient = Random.Range(1, 5);
+        do
+        {
+            side = Random.Range(1, 3);
+        } while (side == lastSide);
+        lastSide = side;
+
+        do
+        {
+            varient = Random.Range(1, 6);
+        } while (varient == lastVariant);
+        lastVariant = varient;
 
         switch (side)
         {

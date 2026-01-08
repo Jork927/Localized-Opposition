@@ -13,13 +13,10 @@ public class NewMittensAI : MonoBehaviour
     Transform target;
     Vector2 moveDirection;
     public Vector3 offset = new(1, 0);
-<<<<<<< HEAD
+
     private bool playerDetector = false;
     public float detectionRange = 10f;
-=======
-    public float chaseRange = 5f;
 
->>>>>>> 045a6a0b3633b0f276c0e3cecfd06153b6832923
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
@@ -36,11 +33,7 @@ public class NewMittensAI : MonoBehaviour
 
     private void Update()
     {
-<<<<<<< HEAD
-        if (target && playerDetector)
-=======
-        if (target&&Vector2.Distance(target.position, transform.position)<chaseRange)
->>>>>>> 045a6a0b3633b0f276c0e3cecfd06153b6832923
+
         {
             Vector3 direction = (target.position - (Vector3)transform.position + offset).normalized;
             moveDirection = direction;
@@ -86,25 +79,20 @@ public class NewMittensAI : MonoBehaviour
 
     private void FixedUpdate()
     {
-<<<<<<< HEAD
-        if (target && playerDetector)
-=======
-        if (target && Vector2.Distance(target.position, transform.position) < chaseRange)
->>>>>>> 045a6a0b3633b0f276c0e3cecfd06153b6832923
+
+        if (target && Vector2.Distance(target.position, transform.position) < detectionRange)
+
         {
             rb.linearVelocity = new Vector2(moveDirection.x, moveDirection.y) * moveSpeed;
         }
     }
-<<<<<<< HEAD
-}
-=======
 
     void OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(transform.position, chaseRange);
+        Gizmos.DrawWireSphere(transform.position, detectionRange);
     }
 
 }
 
 
->>>>>>> 045a6a0b3633b0f276c0e3cecfd06153b6832923
+

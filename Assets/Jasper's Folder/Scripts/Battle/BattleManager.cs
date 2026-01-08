@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
@@ -80,10 +81,7 @@ public class BattleManager : MonoBehaviour
     {
         if (enemyHealth <= 0)
         {
-            Debug.Log("Enemy defeated. Player wins!");
-            SceneManager.LoadScene(Movement.currentScene);
-            // You can add additional logic here for winning the battle
-            return;
+            KillEnemy();
         }
 
         playerObject.SetActive(true);
@@ -129,6 +127,26 @@ public class BattleManager : MonoBehaviour
     {
         deathScreen.SetActive(true);
         battleObject.SetActive(false);
+    }
+
+    public void KillEnemy()
+    {
+        enemyHealth = 0;
+        EndEnemyTurn();
+        buttons.SetActive(false);
+        attackBox.SetActive(false);
+        inventory.SetActive(false);
+
+        Debug.Log("Enemy defeated. Player wins!");
+        Invoke("EndBattle", 3);
+        return;
+    }
+
+    void EndBattle()
+    {
+        Debug.Log("THE FOG IS COMING THE FOG IS COMING THE FOG IS COMING THE FOG IS COMING THE FOG IS COMING THE FOG IS COMING");
+        SceneManager.LoadScene(Movement.currentScene);
+        
     }
 
     void Update()

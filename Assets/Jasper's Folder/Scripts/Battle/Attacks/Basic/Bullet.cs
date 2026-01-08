@@ -4,6 +4,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public GameObject child;
+    public GameObject emitter;
     public float horizontalSpeed;
     public float verticalSpeed;
 
@@ -15,12 +16,13 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         audioSrc = GetComponent<AudioSource>();
-        audioSrc.PlayOneShot(shootSound);
+        //audioSrc.PlayOneShot(shootSound);
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        emitter.transform.localScale = transform.localScale / 3;
         transform.Translate(horizontalSpeed * Time.deltaTime, verticalSpeed * Time.deltaTime, 0);
         child.transform.Rotate(0, 0, 720 * Time.deltaTime);
     }

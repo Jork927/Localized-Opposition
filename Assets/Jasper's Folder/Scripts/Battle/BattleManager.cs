@@ -78,6 +78,14 @@ public class BattleManager : MonoBehaviour
 
     public void StartEnemyTurn()
     {
+        if (enemyHealth <= 0)
+        {
+            Debug.Log("Enemy defeated. Player wins!");
+            SceneManager.LoadScene(Movement.currentScene);
+            // You can add additional logic here for winning the battle
+            return;
+        }
+
         playerObject.SetActive(true);
         bulletBox.SetActive(true);
 

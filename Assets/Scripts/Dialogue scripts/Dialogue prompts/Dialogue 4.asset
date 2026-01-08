@@ -19,7 +19,17 @@ MonoBehaviour:
 
       Click to continue'
   - name: 'M.I.T.T.E.N.S. '
+<<<<<<< HEAD
     dialogue: 'You can attack or use an item to heal/upgrade M.I.T.T.E.N.S.
 
       Or
       attack to deal damage'
+=======
+    dialogue: Dodge the enemy attacks, then choose to heal or attack
+  - name: 'M.I.T.T.E.N.S. '
+    dialogue: 'Click your items in your inventory to use them in battle
+
+
+      Press
+      Spacebar when the line is in the green to deal damage'
+>>>>>>> 045a6a0b3633b0f276c0e3cecfd06153b6832923

@@ -9,14 +9,22 @@ public class Movement : MonoBehaviour
     private Vector2 input;
     
     private Animator animator;
+    public static Vector2 Lastpos;
+    public static string currentScene;
 
     // Start is called before the first frame update
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
         animator = GetComponent<Animator>();
+
+<<<<<<< HEAD
+        animator = GetComponent<Animator>();
+=======
+        transform.position = Lastpos;
+        currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+>>>>>>> 045a6a0b3633b0f276c0e3cecfd06153b6832923
     }
 
     // Update is called once per frame - used for inputs and timers
@@ -42,5 +50,14 @@ public class Movement : MonoBehaviour
     {
         rb.linearVelocity = input * speed;
     }
+<<<<<<< HEAD
 }
     
+=======
+
+    private void OnDestroy()
+    {
+        Lastpos=transform.position;
+    }
+}
+>>>>>>> 045a6a0b3633b0f276c0e3cecfd06153b6832923

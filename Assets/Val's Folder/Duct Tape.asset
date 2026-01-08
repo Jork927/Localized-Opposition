@@ -10,10 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f2bf9e9737d0dd4bb4fef827c5815c6, type: 3}
-  m_Name: TEST
+  m_Name: Duct Tape
   m_EditorClassIdentifier: 
   stackable: 1
-  image: {fileID: -6682515874435423343, guid: c953e411508174f4297c7ede4ca185f3, type: 3}
+  image: {fileID: -1894536124567444308, guid: 650fa3afbb4e33d47aeeb1583998e00b, type: 3}
+  onGrab:
+    m_PersistentCalls:
+      m_Calls: []
   onUse:
     m_PersistentCalls:
       m_Calls:

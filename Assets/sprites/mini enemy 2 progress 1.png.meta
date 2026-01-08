@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 01c3cbd687cdba2419533b8520184a09
+guid: 3eea5f237c197c04da40ac59367834df
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4477975902642592787
-    second: mini enemy 2 progress_0
+      213: 7687930824902170154
+    second: mini enemy 2 progress 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,11 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-<<<<<<< HEAD
-    filterMode: 0
-=======
     filterMode: 1
->>>>>>> 045a6a0b3633b0f276c0e3cecfd06153b6832923
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -79,11 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-<<<<<<< HEAD
-    textureCompression: 0
-=======
     textureCompression: 1
->>>>>>> 045a6a0b3633b0f276c0e3cecfd06153b6832923
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -104,8 +96,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<< HEAD
-=======
   - serializedVersion: 4
     buildTarget: Android
     maxTextureSize: 2048
@@ -132,12 +122,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
->>>>>>> 045a6a0b3633b0f276c0e3cecfd06153b6832923
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mini enemy 2 progress_0
+      name: mini enemy 2 progress 1_0
       rect:
         serializedVersion: 2
         x: 9
@@ -152,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: de3aa3254a80bd1c0800000000000000
-      internalID: -4477975902642592787
+      spriteID: a26d1145a5401ba60800000000000000
+      internalID: 7687930824902170154
       vertices: []
       indices: 
       edges: []
@@ -172,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      mini enemy 2 progress_0: -4477975902642592787
+      mini enemy 2 progress 1_0: 7687930824902170154
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
